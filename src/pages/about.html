@@ -1,0 +1,187 @@
+---
+layout: "base.html"
+description: "Meta description for the page"
+metaTitle: "Signature Fencing"
+tagTitle: "About"
+preloadImg: "/images/cabinets2-1920w.webp"
+preloadCSS: "/css/about.css"
+permalink: "about/"
+eleventyNavigation:
+  key: About Us
+  order: 300
+---
+
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
+
+<section id="int-hero">
+  <h1 id="home-h">About Us</h1>
+  {% image './src/images/about_banner_img.png', 'vinyl fence', '', 'lazy',
+  '(max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      {% image './src/images/about_img_1.png', 'vinyl fence', 'cs-picture
+      cs-picture1', 'lazy'%} {% image './src/images/featured_img_2.png',
+      'aluminium fence', 'cs-picture cs-picture2', 'lazy'%}
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-right">
+      <span class="cs-topper">Who We Are</span>
+      <h2 class="cs-title">Built for Installers. Trusted by Homeowners.</h2>
+      <p class="cs-text">
+        At Signature Fencing, we specialize in premium vinyl and
+        aluminum fencing systems engineered for real-world performance. Every
+        product we offer, from fabricated panels to welded gates is shaped by
+        decades of hands-on installation experience and refined by a deep
+        understanding of what contractors, property owners, and distributors
+        actually need on-site.
+      </p>
+      <p class="cs-text">
+        We believe quality starts long before a fence is installed. That’s why
+        we’ve brought fabrication, welding, powder coating, and packaging under
+        one roof, giving us total control over the consistency, fit, and
+        durability of every system we deliver. Whether you're building a
+        residential backyard enclosure or a multi-property commercial fence
+        line, we make sure each component arrives installer-ready and built to
+        last.
+      </p>
+      <p class="cs-text">
+        Our team is made up of professionals who’ve spent years in the field—not
+        just on the factory floor. That perspective drives everything we do,
+        from gate alignment and fastener selection to packaging that prevents
+        damage and speeds up unloading. We're not just manufacturers, we’re
+        problem solvers who design fencing with real-world challenges in mind.
+      </p>
+      <div class="cs-flex-group">
+        <p class="cs-flex-p">
+          Founded on the principle that quality work should be simple to install
+          and built to perform, Signature Fencing continues to grow as a trusted
+          partner for contractors, wholesalers, and homeowners who value
+          precision, speed, and long-term reliability.
+        </p>
+        <span class="cs-name">Signature Fencing Team</span>
+        <span class="cs-job">Designers. Fabricators. Installers.</span>
+        <img
+          class="cs-quote-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+          alt="quote icon"
+          width="136"
+          height="77"
+        />
+      </div>
+      <a href="/vinylfencing/" class="button-solid">Explore Our Fencing Systems</a>
+    </div>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-326">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">FAQs</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="cs-flex-group">
+            <ul class="cs-faq-group">
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What types of fencing products do you offer?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Signature Fencing offers a wide range of premium fencing solutions including vinyl fencing, aluminum fencing, privacy panels, picket fencing, and ranch-style rails. All our products are designed for long-lasting performance and aesthetic appeal.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Do you offer custom fence designs?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes. We specialize in custom fabrication and can match your specific layout or style needs. From unique gates to special post spacing or heights, our team can create fencing tailored to your property.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Are your PVC fence products maintenance-free?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Yes. Our PVC fencing products are virtually maintenance-free. They won’t warp, crack, peel, or require painting like traditional wood fences, and they stand up well to the elements year-round.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            Where can I buy your fencing products?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Signature Fencing products are available through authorized dealers and professional installers throughout the Midwest and beyond. Contact us to find a dealer near you or request a quote directly.
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            What makes Signature Fencing different?
+                        </span>
+                    </button>
+                    <p class="cs-item-p">
+                        Unlike big-box brands, we focus on quality, customization, and service. Our fencing is fabricated with precision and care using premium materials and is backed by a commitment to durability and design flexibility.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <script>
+      const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                
+    </script>
+</section>
+                                
+                                
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Get It Done <br />
+      With Us Today
+    </h2>
+    <p>
+      Big ideas start with a simple conversation. Reach out today and let’s get
+      your project on the books.
+    </p>
+    <a href="/contact.html" class="button-solid">Free Estimate</a>
+  </div>
+  {% image './src/images/final_home_img.png', 'vinyl fence', '', 'lazy',
+  '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
+</section>
