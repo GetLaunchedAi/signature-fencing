@@ -263,7 +263,7 @@
     left: 0;
     width: 100%;
     z-index: 10000;
-    height: auto;
+    height: 6rem;
   }
   #navigation .background-color-div {
     position: absolute;
@@ -285,7 +285,7 @@
   }
   #navigation .logo img {
     width: auto;
-    height: 100%;
+    height: 5rem;
   }
   #navigation .logo .light {
     display: none;
