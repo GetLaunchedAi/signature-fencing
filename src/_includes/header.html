@@ -30,7 +30,7 @@
 <nav id="navbar-menu" aria-label="main navigation">
     <ul>
         {%- for entry in navPages %}
-            <li class="{% if entry.title in ['Services', 'PVC Styles', 'Aluminum Styles'] %}dropdown{% endif %}" id="{{ entry.title }}">
+            <li  id={{entry.title}} class="{% if entry.title == 'Services' %}dropdown{% elif entry.title == 'PVC Styles' %}dropdown2{% elif entry.title == 'Aluminum Styles' %}dropdown3{% endif %}" >
                 {% if entry.title == 'Services' %}
                     <a class="dropdown-toggle" role="button" tabindex="0">
                         {{ entry.title }}
@@ -40,10 +40,10 @@
                         <li><a href="/aluminiumfencing/">Aluminium Fencing</a></li>
                     </ul>
                 {% elif entry.title == 'PVC Styles' %}
-                    <a class="dropdown-toggle" role="button" tabindex="0">
+                    <a class="dropdown-toggle2" role="button" tabindex="0">
                         {{ entry.title }}
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu2">
                         <li><a href="/pvc_picket/">Picket</a></li>
                         <li><a href="/pvc_decorative/">Decorative</a></li>
                         <li><a href="/pvc_semi_privacy/">Semi-Privacy</a></li>
@@ -57,7 +57,7 @@
                     <a class="dropdown-toggle" role="button" tabindex="0">
                         {{ entry.title }}
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu3">
                         <li><a href="/aluminum_washington_martha/">Washington/Martha</a></li>
                         <li><a href="/aluminum_adams_abigail/">Adams/Abgigail</a></li>
                         <li><a href="/aluminum_reverse_rachel/">Reverse/Rachel</a></li>
