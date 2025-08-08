@@ -1,0 +1,79 @@
+/*-- -------------------------- -->
+<---          Gallery           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #gallery-565 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #gallery-565 .cs-picture {
+        width: 100%;
+        height: auto;
+        block-size: fit-content;
+        /* height divided by width */
+        /* aspect-ratio: 1.34328358; */
+        display: block;
+        position: relative;
+        /* border: solid 1px blue; */
+    }
+    #gallery-565 .cs-picture img {
+        position: static;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+    }
+    #post_caps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #post_caps .cs-picture {
+        width: 100%;
+        height: auto;
+        block-size: fit-content;
+        /* height divided by width */
+        aspect-ratio: auto;
+        display: block;
+        position: relative;
+        /* border: solid 1px blue; */
+    }
+    #post_caps .cs-picture img {
+        position: static;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #gallery-565 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #gallery-565 .cs-picture {
+        /* 268px - 550px */
+        height: clamp(16.75rem, 37vw, 34.375rem);
+        aspect-ratio: initial;
+        width:25%;
+    }
+    #post_caps {
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: #ced3d7;
+
+    }
+    #post_caps .cs-picture {
+        height:80%;
+        width:33%;
+        aspect-ratio:1.34328358;
+
+    }
+}
+
