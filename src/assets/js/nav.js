@@ -7,6 +7,7 @@ const serviceMenu = document.querySelector("#navigation .dropdown");
 const pvcMenu = document.querySelector("#navigation .dropdown2");
 const aluminumMenu = document.querySelector("#navigation .dropdown3");
 
+const pvc = document.querySelector('#PVC')
 const aluminum = document.querySelector('#Aluminum')
 const about = document.querySelector('#About')
 const contact = document.querySelector('#Contact')
@@ -35,6 +36,10 @@ serviceMenu.addEventListener('click', function () {
         if (screenWidth < 770) {
             about.style.display = 'none'
             contact.style.display = 'none'
+            aluminum.style.display= 'none'
+            pvc.style.display = 'none'
+
+
         }
 
 
@@ -44,6 +49,8 @@ serviceMenu.addEventListener('click', function () {
         if (screenWidth < 770) {
             about.style.display = 'block'
             contact.style.display = 'block'
+            aluminum.style.display= 'block'
+            pvc.style.display = 'block'
         }
 
 

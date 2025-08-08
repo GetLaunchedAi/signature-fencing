@@ -334,7 +334,7 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     overflow: visible;
   }
-  body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown-menu {
+  body.dark-mode #navigation #navbar-menu .dropdown.open .dropdown2.open .dropdown3.open .dropdown-menu .dropdown-menu2 .dropdown-menu3 {
     background-color: var(--medium);
   }
   .dropdown-menu li a {
