@@ -33,7 +33,7 @@
         align-items: center;
     }
     #post_caps .cs-picture {
-        width: 100%;
+        width: 75%;
         height: auto;
         block-size: fit-content;
         /* height divided by width */
