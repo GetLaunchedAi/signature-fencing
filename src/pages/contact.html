@@ -101,4 +101,50 @@ eleventyNavigation:
 </section>
                                 
   </div>
+<!-- add this just under the submit button inside the form -->
+<p id="form-status" aria-live="polite" style="margin-top:.75rem;"></p>
+
+<script>
+const form = document.getElementById('cs-form-242');
+
+form.insertAdjacentHTML('beforeend', '<input type="text" name="company" style="display:none" tabindex="-1" autocomplete="off" />');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const status = document.getElementById('form-status');
+
+  // honeypot
+  const hp = form.querySelector('input[name="company"]');
+  if (hp && hp.value) { status.textContent = 'Thanks!'; return; }
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  const subject = `New inquiry from ${data.name || 'Website'}`;
+  const html = `
+    <h2>New Website Inquiry</h2>
+    <p><strong>Name:</strong> ${data.name || ''}</p>
+    <p><strong>Email:</strong> ${data.email || ''}</p>
+    <p><strong>Phone:</strong> ${data.phone || ''}</p>
+    <p><strong>How did you find us:</strong> ${data['find-us'] || ''}</p>
+    <p><strong>Message:</strong><br>${((data.Message || '').toString()).replace(/\n/g,'<br>')}</p>
+  `;
+
+  try {
+    const res = await fetch('/.netlify/functions/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ subject, html, reply_to: data.email }) // function only needs these right now
+    });
+
+    const json = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(json.error || JSON.stringify(json));
+    status.textContent = 'Thanks! Your message has been sent.';
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    status.textContent = 'Sorry—something went wrong. Please try again.';
+  }
+});
+</script>
+
 </section>
