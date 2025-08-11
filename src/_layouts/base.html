@@ -46,7 +46,7 @@
         <!-- For home page, use full title, including location for SEO. Other pages should just include the page name -->
         <title>
             {% if page.url == '/'%}
-                {{ client.name }} | {{ tagTitle }} | {{ client.address.city }}, {{ client.address.county }}
+                {{ client.name }} | {{ tagTitle }} 
             {% else %}
                 {{ tagTitle }} | {{ client.name }}
             {% endif %}
